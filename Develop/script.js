@@ -6,25 +6,11 @@ var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"
 var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialCharacter = ["!", "#", "$", "%", "&", "(", ")", "*", "+", "-"];
 
-// // Alert - send a message
-// alert('This is my message to the user!')
-
-// // Confirm - collect user info - true false
-// var trueFalse = confirm('Is the sky blue?')
-
-// // Prompt - collects user info - input 
-// var userInput = prompt("What's your favorite color?")
-
-// console.log('Sky: ', trueFalse);
-// console.log('Color: ', userInput);
-
-
-
 
 function generatePassword() {
 
   // Ask user how many characters they want in their password
-  var pwLength = prompt("How many characters you want in your password?")
+  var pwLength = prompt("How many characters do you want in your password?")
 
   // Check to make sure their answer follows criteria
   if (isNaN(pwLength)) {
@@ -38,10 +24,10 @@ function generatePassword() {
   }
 
   // Collect user's character type preferences
-  var useLowerCase = confirm("Is your password use lower case")
-  var useUpperCase = confirm("Is your password use upper case")
-  var useNumber = confirm("Is your password use number")
-  var useSpecialcharacter = confirm("Is your password use Special character")
+  var useLowerCase = confirm("Does your password use lower case")
+  var useUpperCase = confirm("Does your password use upper case")
+  var useNumber = confirm("Does your password use number")
+  var useSpecialcharacter = confirm("Does your password use Special character")
 
   if (useLowerCase === false && useUpperCase === false && useNumber === false && useSpecialcharacter === false) {
     alert("you must choose at least one character type");
@@ -69,11 +55,11 @@ function generatePassword() {
 
 
   // declare password array variable as placeholder
-  var pwd = [useLowerCase, useUpperCase, useNumber, useSpecialcharacter];
-  for (var i =0; i < pwd.length; i++){
-    console.log[Math.floor(Math.random() * pwLength)];
-    
-  }
+  var password = "";
+  for (var i = 0; i < pwLength; i++) {
+  var randomIndex = Math.floor(Math.random() * userCharacterPool.length);
+  password += userCharacterPool[randomIndex];
+}
   // for loop through userCharacterPool to pull out random characters usings Math.floor and Math.random
   // push random characters to password array
 

@@ -3,6 +3,7 @@
 - https://shok1to.github.io/First-Javascript/
 
 <img alt src="./Assets/03-javascript-homework-demo.png" />
+
 ## Description
 
 - Prompt the user for password criteria
